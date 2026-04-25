@@ -5,7 +5,6 @@ WORKDIR /app
 COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY model.joblib ./model.joblib
 COPY backend/ ./
 
 EXPOSE 8000
