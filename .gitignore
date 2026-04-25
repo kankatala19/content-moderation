@@ -1,0 +1,39 @@
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Database
+*.db
+*.sqlite3
+moderation.db
+
+# Machine Learning / Large Data Files
+train.csv
+test.csv
+test_labels.csv
+sample_submission.csv
+*.joblib
+*.pkl
+
+# OS / System Files
+.DS_Store
+Thumbs.db
+
+# IDEs / Editors
+.vscode/
+.idea/
+.cursor/
+
+# Docker
+docker-compose.override.yml

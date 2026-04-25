@@ -1,0 +1,13 @@
+backend/venv/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+.cursor/
+train.csv
+test.csv
+test_labels.csv
+sample_submission.csv
