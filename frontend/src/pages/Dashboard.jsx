@@ -6,6 +6,8 @@ const Dashboard = () => {
   const [stats, setStats] = useState({ total: 0, toxic: 0, safe: 0, spam: 0, profanity: 0 })
   const [history, setHistory] = useState([])
 
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
   useEffect(() => {
     fetchData()
   }, [])
@@ -13,8 +15,8 @@ const Dashboard = () => {
   const fetchData = async () => {
     try {
       const [statsRes, historyRes] = await Promise.all([
-        axios.get('http://localhost:8000/api/dashboard'),
-        axios.get('http://localhost:8000/api/history')
+        axios.get(`${API_URL}/api/dashboard`),
+        axios.get(`${API_URL}/api/history`)
       ])
       setStats(statsRes.data)
       setHistory(historyRes.data)
@@ -25,7 +27,7 @@ const Dashboard = () => {
 
   const handleDeleteAll = async () => {
     try {
-      await axios.delete('http://localhost:8000/api/history')
+      await axios.delete(`${API_URL}/api/history`)
       setHistory([])
       fetchData()
     } catch (error) {

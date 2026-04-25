@@ -7,6 +7,8 @@ const Moderation = () => {
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
 
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
   const analyzeText = async (content) => {
     if (!content.trim()) {
       setResult(null)
@@ -15,7 +17,7 @@ const Moderation = () => {
     
     setLoading(true)
     try {
-      const response = await axios.post('http://localhost:8000/api/analyze', { text: content })
+      const response = await axios.post(`${API_URL}/api/analyze`, { text: content })
       setResult(response.data)
     } catch (error) {
       console.error('Error analyzing text:', error)
