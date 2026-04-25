@@ -24,6 +24,7 @@ test.csv
 test_labels.csv
 sample_submission.csv
 *.joblib
+!backend/model.joblib
 *.pkl
 
 # OS / System Files
