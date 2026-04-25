@@ -1,6 +1,6 @@
-fastapi
-uvicorn
-scikit-learn
-sqlalchemy
-pydantic
-joblib
+fastapi==0.115.0
+uvicorn==0.30.6
+scikit-learn==1.5.1
+sqlalchemy==2.0.35
+pydantic==2.9.2
+joblib==1.4.2

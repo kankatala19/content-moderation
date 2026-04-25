@@ -17,11 +17,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load model
+# Load model with debug logs
 model_path = "model.joblib"
-if os.path.exists(model_path):
-    model = joblib.load(model_path)
-else:
+
+print("Current working directory:", os.getcwd())
+print("Files in folder:", os.listdir("."))
+
+try:
+    if os.path.exists(model_path):
+        print("Model file found")
+        model = joblib.load(model_path)
+        print("Model loaded successfully")
+    else:
+        print("Model file NOT found")
+        model = None
+except Exception as e:
+    print("Model load error:", e)
     model = None
 
 # Dependency
