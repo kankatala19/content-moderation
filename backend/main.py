@@ -11,7 +11,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://content-moderation-lt7or1axq-vinay-kankatalas-projects.vercel.app"],
+    allow_origins=["https://content-moderation-git-main-vinay-kankatalas-projects.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
